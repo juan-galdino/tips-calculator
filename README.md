@@ -94,7 +94,7 @@ The following commands you will be executing them on your terminal.
 
 ### Prerequisites
 
-Make sure you have [NodeJs](https://nodejs.org) installed.
+Make sure you have [NodeJs](https://nodejs.org) installed and [Angular CLI](https://github.com/angular/angular-cli).
 
 ### Installation
 
