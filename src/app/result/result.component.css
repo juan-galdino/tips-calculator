@@ -1,0 +1,14 @@
+.container__result {
+  padding: 2rem 1rem;
+  border-radius: 0.625rem;
+  background-color: var(--resultsBackground);
+  color: var(--resultsFontColor);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.space {
+  display: flex;
+  justify-content: space-between;
+}

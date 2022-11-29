@@ -1,0 +1,23 @@
+main {
+  background-color: var(--mainBackground);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container {
+  display: grid;
+  gap: 1.5rem;
+  background-color: var(--containerBackground);
+  border-radius: 1.25rem;
+  padding: 1rem;
+  max-width: 23.4375rem;
+}

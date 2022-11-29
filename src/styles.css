@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --mainBackground: hsl(185, 41%, 84%);
+  --containerBackground: hsl(0, 0%, 100%);
+  --resultsBackground: hsl(183, 100%, 15%);
+  --resultsFontColor: hsl(0, 0%, 100%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
