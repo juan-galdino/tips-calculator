@@ -4,14 +4,34 @@
       <div>Tip Amount</div>
       <div>/ person</div>
     </div>
-    <div>$0.00</div>
+    <div
+      *ngIf="
+        bill.value !== 0 && tip.value !== 0 && numOfPeople.value !== 0;
+        else default
+      "
+    >
+      ${{ (tip.value / numOfPeople.value).toFixed(2) }}
+    </div>
+    <ng-template #default>$0.00</ng-template>
   </div>
   <div class="space">
     <div>
       <div>Total</div>
       <div>/ person</div>
     </div>
-    <div>$0.00</div>
+    <div
+      *ngIf="
+        bill.value !== 0 && tip.value !== 0 && numOfPeople.value !== 0;
+        else default
+      "
+    >
+      ${{
+        (
+          ((bill.value * tip.value) / 100 + bill.value) /
+          numOfPeople.value
+        ).toFixed(2)
+      }}
+    </div>
   </div>
 
   <button>Reset</button>
