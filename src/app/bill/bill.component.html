@@ -23,10 +23,14 @@
 </div>
 <div>
   <h3>Number of People</h3>
+  <p *ngIf="isZero">Can't be zero</p>
   <input
     type="number"
     aria-label="Number of People"
     class="bigger"
     [(ngModel)]="numOfPeople.value"
+    min="1"
+    #input
+    (input)="checkIfIsZero(input)"
   />
 </div>

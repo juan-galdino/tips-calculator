@@ -14,7 +14,7 @@ export class TipsService {
     value: 0
   }
   _numOfPeople = {
-    value: 0
+    value: 1
   }
 
 }

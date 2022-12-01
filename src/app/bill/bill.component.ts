@@ -11,8 +11,17 @@ export class BillComponent {
   defaultTips: number[] = this.tipsService.defaultTips
   bill = this.tipsService._bill
   tip = this.tipsService._tip
-  numOfPeople = this.tipsService._numOfPeople 
+  numOfPeople = this.tipsService._numOfPeople
+  
+  isZero = false
 
   constructor(private tipsService: TipsService) {}
 
+  checkIfIsZero(input: HTMLInputElement) {
+    if (input.value === "") {
+      this.isZero = false
+    } else if ( Number(input.value) === 0) {
+      this.isZero = true
+    }
+  }
 }
