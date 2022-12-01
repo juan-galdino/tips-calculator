@@ -9,6 +9,12 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
+  font-family: "Space Mono", monospace;
+  background-color: var(--mainBackground);
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 *,
