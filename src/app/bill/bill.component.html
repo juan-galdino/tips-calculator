@@ -22,10 +22,10 @@
   <!-- custom value -->
   <input
     type="number"
-    #customValue
     placeholder="Custom"
-    (input)="setCustomTip(customValue)"
+    (input)="setCustomTip(customTip)"
     (click)="disableRadioStatus()"
+    #customTip
   />
 </div>
 <div>

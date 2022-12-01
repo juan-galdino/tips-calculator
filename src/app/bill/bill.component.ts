@@ -9,8 +9,7 @@ import { TipsService } from '../tips.service';
 export class BillComponent {
 
   @ViewChildren('radio') radiosInputs!: ElementRef[]
-  @ViewChild('customValue') customValue!: ElementRef 
-  
+  @ViewChild('customTip') customValue!: ElementRef 
 
   defaultTips: number[] = this.tipsService.defaultTips
   bill = this.tipsService._bill

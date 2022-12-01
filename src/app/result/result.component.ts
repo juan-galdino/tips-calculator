@@ -13,4 +13,7 @@ export class ResultComponent {
 
   constructor(private tipsService: TipsService) {}
 
+  refreshPage() {
+    document.location.reload()
+  }
 }
