@@ -6,7 +6,12 @@
     </div>
     <div
       *ngIf="
-        bill.value !== 0 && tip.value !== 0 && numOfPeople.value !== 0;
+        bill.value &&
+          bill.value !== 0 &&
+          tip.value &&
+          tip.value !== 0 &&
+          numOfPeople.value &&
+          numOfPeople.value !== 0;
         else default
       "
     >
@@ -21,7 +26,12 @@
     </div>
     <div
       *ngIf="
-        bill.value !== 0 && tip.value !== 0 && numOfPeople.value !== 0;
+        bill.value &&
+          bill.value !== 0 &&
+          tip.value &&
+          tip.value !== 0 &&
+          numOfPeople.value &&
+          numOfPeople.value !== 0;
         else default
       "
     >
