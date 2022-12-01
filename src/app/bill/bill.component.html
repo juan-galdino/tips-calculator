@@ -29,23 +29,4 @@
     class="bigger"
     [(ngModel)]="numOfPeople.value"
   />
-  <!-- #numOfPeople
-    (input)="onGetNumOfPeople(numOfPeople)"
-    (input)="inputCheckerForServiceMethods()" -->
 </div>
-
-<!-- <h2>{{ bill }} / tip: {{ tip.value }} / numOfPp: {{ numOfPeople }}</h2>
-
-<div *ngIf="bill && tip && numOfPeople !== 0; else default">
-  <h3>tip Amount: {{ (tip.value / numOfPeople).toFixed(2) }}</h3>
-  <h3>
-    total {{ (((bill * tip.value) / 100 + bill) / numOfPeople).toFixed(2) }}
-  </h3>
-</div>
-
-<ng-template #default>
-  <h3>tip Amount: nada</h3>
-  <h3>total: nada</h3>
-</ng-template> -->
-<!-- <button (click)="inputCheckerForServiceMethods()">Test</button>
-<button (click)="getTipAmount()">Get tip amount</button> -->
