@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChildren, ViewChild } from '@angular/core';
 import { TipsService } from '../tips.service';
 
 @Component({
@@ -7,6 +7,10 @@ import { TipsService } from '../tips.service';
   styleUrls: ['./bill.component.css']
 })
 export class BillComponent {
+
+  @ViewChildren('radio') radiosInputs!: ElementRef[]
+  @ViewChild('customValue') customValue!: ElementRef 
+  
 
   defaultTips: number[] = this.tipsService.defaultTips
   bill = this.tipsService._bill
@@ -23,5 +27,18 @@ export class BillComponent {
     } else if ( Number(input.value) === 0) {
       this.isZero = true
     }
+  }
+
+  setCustomTip(customTip : HTMLInputElement) {
+    this.tip.value = Number(customTip.value)
+  }
+
+  disableRadioStatus() {
+    [...this.radiosInputs].forEach( radio => {
+      if (radio.nativeElement.checked) {
+        radio.nativeElement.checked = false
+        this.tip.value = this.customValue.nativeElement.value;
+      }
+    })
   }
 }

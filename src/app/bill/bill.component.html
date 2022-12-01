@@ -15,11 +15,18 @@
       name="tipValue"
       [value]="defaultTip"
       [(ngModel)]="tip.value"
+      #radio
     />
     {{ defaultTip }}
   </div>
   <!-- custom value -->
-  <input type="number" #customValue placeholder="Custom" />
+  <input
+    type="number"
+    #customValue
+    placeholder="Custom"
+    (input)="setCustomTip(customValue)"
+    (click)="disableRadioStatus()"
+  />
 </div>
 <div>
   <h3>Number of People</h3>
@@ -30,7 +37,7 @@
     class="bigger"
     [(ngModel)]="numOfPeople.value"
     min="1"
-    #input
-    (input)="checkIfIsZero(input)"
+    #inputPeople
+    (input)="checkIfIsZero(inputPeople)"
   />
 </div>
