@@ -1,8 +1,8 @@
-<div class="container__result">
-  <div class="space">
+<section class="container__result">
+  <div class="container__justify">
     <div>
-      <div>Tip Amount</div>
-      <div>/ person</div>
+      Tip Amount <br />
+      <span>/ person</span>
     </div>
     <div
       *ngIf="
@@ -13,14 +13,16 @@
         else default
       "
     >
-      ${{ (tip.value / numOfPeople.value).toFixed(2) }}
+      <span class="container__money">
+        ${{ (tip.value / numOfPeople.value).toFixed(2) }}
+      </span>
     </div>
-    <ng-template #default>$0.00</ng-template>
   </div>
-  <div class="space">
+  <div class="container__justify">
     <div>
-      <div>Total</div>
-      <div>/ person</div>
+      Total
+      <br />
+      <span>/ person</span>
     </div>
     <div
       *ngIf="
@@ -31,14 +33,20 @@
         else default
       "
     >
-      ${{
-        (
-          ((bill.value * tip.value) / 100 + bill.value) /
-          numOfPeople.value
-        ).toFixed(2)
-      }}
+      <span class="container__money">
+        ${{
+          (
+            ((bill.value * tip.value) / 100 + bill.value) /
+            numOfPeople.value
+          ).toFixed(2)
+        }}
+      </span>
     </div>
+
+    <ng-template #default>
+      <span class="container__money">$0.00</span>
+    </ng-template>
   </div>
 
   <button (click)="refreshPage()">Reset</button>
-</div>
+</section>
