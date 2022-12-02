@@ -1,16 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
 :root {
-  --mainBackground: hsl(185, 41%, 84%);
-  --containerBackground: hsl(0, 0%, 100%);
-  --resultsBackground: hsl(183, 100%, 15%);
-  --resultsFontColor: hsl(0, 0%, 100%);
+  /* colors */
+  --primary-color: hsl(183, 100%, 15%);
+  --accent-color: hsl(172, 67%, 45%);
+  --neutral-white: hsl(0, 0%, 100%);
+
+  --background: hsl(185, 41%, 84%);
+  --container-background: var(--neutral-white);
+  --input-background: hsl(189, 41%, 97%);
+  --results-background: var(--primary-color);
+  --primary-font-color: var(--primary-color);
+  --results-font-color: var(--neutral-white);
 }
 
 html {
   box-sizing: border-box;
   font-size: 100%;
   font-family: "Space Mono", monospace;
-  background-color: var(--mainBackground);
+  background-color: var(--background);
   height: 100vh;
   display: grid;
   justify-content: center;

@@ -12,8 +12,8 @@ section {
 .container {
   display: grid;
   gap: 1.5rem;
-  background-color: var(--containerBackground);
+  background-color: var(--container-background);
   border-radius: 1.25rem;
-  padding: 1rem;
+  padding: 2rem;
   max-width: 23.4375rem;
 }

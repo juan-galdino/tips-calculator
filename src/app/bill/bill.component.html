@@ -1,43 +1,54 @@
-<div>
-  <h3>Bill</h3>
-  <input
-    type="number"
-    aria-label="Bill"
-    class="bigger"
-    [(ngModel)]="bill.value"
-  />
-</div>
-<div>
-  <h3>Select Tip %</h3>
-  <div *ngFor="let defaultTip of defaultTips">
+<section class="container__bill">
+  <header>
+    <h3>Bill</h3>
+    <input type="number" aria-label="Bill" [(ngModel)]="bill.value" />
+  </header>
+
+  <article>
+    <h3>Select Tip %</h3>
+    <section class="container__all-tips">
+      <div
+        *ngFor="let defaultTip of defaultTips"
+        class="container__button-tip container__radio"
+      >
+        <label>
+          <input
+            type="radio"
+            name="tipValue"
+            aria-label="Tip option"
+            [value]="defaultTip"
+            [(ngModel)]="tip.value"
+            #radio
+          />
+          <span>{{ defaultTip }}%</span>
+        </label>
+      </div>
+      <div>
+        <input
+          type="number"
+          placeholder="Custom"
+          aria-label="Custom Tip"
+          (input)="setCustomTip(customTip)"
+          (click)="disableRadioStatus()"
+          #customTip
+          class="container__button-tip"
+        />
+      </div>
+    </section>
+  </article>
+
+  <footer>
+    <section>
+      <h3>Number of People</h3>
+      <p *ngIf="isZero">Can't be zero</p>
+    </section>
     <input
-      type="radio"
-      name="tipValue"
-      [value]="defaultTip"
-      [(ngModel)]="tip.value"
-      #radio
+      type="number"
+      aria-label="Number of People"
+      [(ngModel)]="numOfPeople.value"
+      min="1"
+      #inputPeople
+      (input)="checkIfIsZero(inputPeople)"
     />
-    {{ defaultTip }}
-  </div>
-  <!-- custom value -->
-  <input
-    type="number"
-    placeholder="Custom"
-    (input)="setCustomTip(customTip)"
-    (click)="disableRadioStatus()"
-    #customTip
-  />
-</div>
-<div>
-  <h3>Number of People</h3>
-  <p *ngIf="isZero">Can't be zero</p>
-  <input
-    type="number"
-    aria-label="Number of People"
-    class="bigger"
-    [(ngModel)]="numOfPeople.value"
-    min="1"
-    #inputPeople
-    (input)="checkIfIsZero(inputPeople)"
-  />
-</div>
+  </footer>
+</section>
