@@ -31,7 +31,7 @@ span {
 }
 
 .container__money {
-  font-size: 2rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
 }
 
 button {
