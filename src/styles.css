@@ -8,7 +8,7 @@
   --container-background: var(--neutral-white);
   --input-background: hsl(189, 41%, 97%);
   --results-background: var(--primary-color);
-  --primary-font-color: var(--primary-color);
+  --bill-font-color: hsl(186, 14%, 43%);
   --results-font-color: var(--neutral-white);
 }
 

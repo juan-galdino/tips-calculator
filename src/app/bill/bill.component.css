@@ -2,6 +2,7 @@
   display: grid;
   gap: 2rem;
   font-size: 0.875rem;
+  color: var(--bill-font-color);
 }
 
 h3 {
@@ -12,14 +13,16 @@ h3 {
   margin-bottom: 1rem;
 }
 
-div,
-input {
-  color: var(--primary-font-color);
-}
-
 input {
   border: none;
   border-radius: 0.3125rem;
+  font-family: "Space Mono", monospace;
+  color: var(--bill-font-color);
+  transition: box-shadow ease 0.3s;
+}
+
+input:focus {
+  color: var(--primary-color);
 }
 
 input::-webkit-outer-spin-button,
@@ -71,6 +74,12 @@ input[type="number"] {
 
 .container__radio {
   font-size: 1.5rem;
+  transition: all ease 0.3s;
+}
+
+.container__radio:hover {
+  opacity: 0.8;
+  box-shadow: var(--primary-color) 0px 3px 8px;
 }
 
 .container__radio label {
@@ -91,6 +100,7 @@ input[type="number"] {
   top: 0;
   left: 0;
   border-radius: 0.3125rem;
+  transition: box-shadow ease 0.3s;
 }
 
 .container__radio label span {
@@ -99,10 +109,11 @@ input[type="number"] {
 
 .container__radio label input[type="radio"]:checked {
   background-color: var(--accent-color);
+  box-shadow: var(--accent-color) 0px 3px 8px;
 }
 
 .container__radio label input[type="radio"]:checked + span {
-  color: var(--primary-font-color);
+  color: var(--primary-color);
 }
 
 input[placeholder="Custom"] {
@@ -113,6 +124,7 @@ input[placeholder="Custom"] {
 
 input[placeholder="Custom"]::placeholder {
   text-align: center;
+  font-size: 1.125rem;
 }
 
 input[placeholder="Custom"]:focus {
