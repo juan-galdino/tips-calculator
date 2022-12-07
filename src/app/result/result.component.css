@@ -1,16 +1,28 @@
 .container__result {
-  padding: 2.25rem 1.5rem 1.5rem 1.5rem;
-  border-radius: 1rem;
-  background-color: var(--results-background);
-  color: var(--results-font-color);
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  padding: 2.25rem 1.5rem 1.5rem 1.5rem;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: var(--results-background);
+  color: var(--results-font-color);
+}
+
+@media screen and (min-width: 48em) {
+  .container__result {
+    padding: 2.5rem 2rem;
+  }
 }
 
 .container__justify {
   display: flex;
   justify-content: space-between;
+}
+
+.container__justify:nth-last-child(2) {
+  margin-bottom: 5rem;
 }
 
 span {
@@ -23,12 +35,22 @@ span {
 }
 
 button {
-  background-color: var(--accent-color);
-  color: var(--results-background);
+  position: absolute;
+  bottom: 1.5rem;
+  width: calc(100% - 3rem);
+  cursor: pointer;
   border: none;
+  padding: 0.875rem;
   font-size: 1.25rem;
   font-weight: 700;
   border-radius: 0.3125rem;
-  padding: 0.875rem;
-  margin-top: 0.5rem;
+  color: var(--results-background);
+  background-color: var(--accent-color);
+}
+
+@media screen and (min-width: 48em) {
+  button {
+    bottom: 2rem;
+    width: calc(100% - 4rem);
+  }
 }

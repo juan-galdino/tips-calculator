@@ -17,3 +17,11 @@ section {
   padding: 2rem;
   max-width: 23.4375rem;
 }
+
+@media screen and (min-width: 48em) {
+  .container {
+    max-width: 48rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}

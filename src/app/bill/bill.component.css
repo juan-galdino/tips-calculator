@@ -54,6 +54,12 @@ input[type="number"] {
   gap: 1rem;
 }
 
+@media screen and (min-width: 48em) {
+  .container__all-tips {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .container__button-tip {
   font-size: 1.5rem;
   background-color: var(--primary-color);
