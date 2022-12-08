@@ -34,7 +34,7 @@
     <a href="https://github.com/juan-galdino/tips-calculator.git"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/juan-galdino/tips-calculator.git">View Demo</a>
+    <a href="https://angular-tips-calculator.netlify.app">View Demo</a>
     ·
     <a href="https://github.com/juan-galdino/tips-calculator/issues">Report Bug</a>
     ·
@@ -194,7 +194,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Juan Galdino - jgaldino.cs@gmail.com
 
-Project link: [https://github.com/juan-galdino/tips-calculator.git](https://github.com/juan-galdino/tips-calculator.git)
+Project link: [https://angular-tips-calculator.netlify.app](https://angular-tips-calculator.netlify.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
