@@ -22,7 +22,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/juan-galdino/tips-calculator.git">
+  <a href="https://github.com/juan-galdino/tips-calculator">
     <img src="src/assets/frontend-mentor-logo.jpg" alt="Logo" width="80" height="80" style="border-radius: 100%">
   </a>
 
@@ -36,9 +36,9 @@
     <br />
     <a href="https://github.com/juan-galdino/tips-calculator.git">View Demo</a>
     ·
-    <a href="https://github.com/juan-galdino/tips-calculator.git/issues">Report Bug</a>
+    <a href="https://github.com/juan-galdino/tips-calculator/issues">Report Bug</a>
     ·
-    <a href="https://github.com/juan-galdino/tips-calculator.git/issues">Request Feature</a>
+    <a href="https://github.com/juan-galdino/tips-calculator/issues">Request Feature</a>
   </p>
 </div>
 
@@ -76,7 +76,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
 This project is just a way to solve this challenge from [Frontend Mentor][frontend-mentor-url],
-a place where are a lot of challenges for every level of frontend skills. The objective is to reproduce in code the image above.
+a place where are a lot of challenges for every level of frontend skills. The image above represents the current state of the project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,12 +114,12 @@ Make sure you have [NodeJs](https://nodejs.org) installed and [Angular CLI](http
 
 ## Roadmap
 
-- [] HTML Structure
-- [] Functions
-- [] Mobile Design
-- [] Desktop Design
+- [x] HTML Structure
+- [x] Functions
+- [x] Mobile Design
+- [x] Desktop Design
 
-See the [open issues](https://github.com/juan-galdino/tips-calculator.git/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/juan-galdino/tips-calculator/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -212,15 +212,15 @@ Project link: [https://github.com/juan-galdino/tips-calculator.git](https://gith
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/juan-galdino/stats-preview-component.svg?style=for-the-badge
-[contributors-url]: https://github.com/juan-galdino/tips-calculator.git/graphs/contributors
+[contributors-url]: https://github.com/juan-galdino/tips-calculator/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/juan-galdino/stats-preview-component.svg?style=for-the-badge
-[forks-url]: https://github.com/juan-galdino/tips-calculator.git/network/members
+[forks-url]: https://github.com/juan-galdino/tips-calculator/network/members
 [stars-shield]: https://img.shields.io/github/stars/juan-galdino/stats-preview-component.svg?style=for-the-badge
-[stars-url]: https://github.com/juan-galdino/tips-calculator.git/stargazers
+[stars-url]: https://github.com/juan-galdino/tips-calculator/stargazers
 [issues-shield]: https://img.shields.io/github/issues/juan-galdino/stats-preview-component.svg?style=for-the-badge
-[issues-url]: https://github.com/juan-galdino/tips-calculator.git/issues
+[issues-url]: https://github.com/juan-galdino/tips-calculator/issues
 [license-shield]: https://img.shields.io/github/license/juan-galdino/stats-preview-component.svg?style=for-the-badge
-[license-url]: https://github.com/juan-galdino/tips-calculator.git/blob/master/LICENSE.txt
+[license-url]: https://github.com/juan-galdino/tips-calculator/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/juangaldino
 [page-screenshot]: src/assets/page-screenshot.png
