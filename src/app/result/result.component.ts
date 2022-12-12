@@ -13,6 +13,19 @@ export class ResultComponent {
 
   constructor(private tipsService: TipsService) {}
 
+  getTipAmountByPerson() {
+    return (((this.tip.value * this.bill.value) / 100) / this.numOfPeople.value).toFixed(2)
+  }
+
+  getTotalByPerson() {
+    return(
+      (
+        ((this.bill.value * this.tip.value) / 100 + this.bill.value) /
+        this.numOfPeople.value
+      ).toFixed(2)
+    ) 
+  }
+
   refreshPage() {
     document.location.reload()
   }

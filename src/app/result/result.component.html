@@ -13,9 +13,7 @@
         else default
       "
     >
-      <span class="container__money">
-        ${{ (tip.value / numOfPeople.value).toFixed(2) }}
-      </span>
+      <span class="container__money"> ${{ getTipAmountByPerson() }} </span>
     </div>
   </div>
   <div class="container__justify">
@@ -33,14 +31,7 @@
         else default
       "
     >
-      <span class="container__money">
-        ${{
-          (
-            ((bill.value * tip.value) / 100 + bill.value) /
-            numOfPeople.value
-          ).toFixed(2)
-        }}
-      </span>
+      <span class="container__money"> ${{ getTotalByPerson() }} </span>
     </div>
 
     <ng-template #default>
