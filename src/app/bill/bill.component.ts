@@ -6,6 +6,7 @@ import { TipsService } from '../tips.service';
   templateUrl: './bill.component.html',
   styleUrls: ['./bill.component.css']
 })
+
 export class BillComponent {
 
   @ViewChildren('radio') radiosInputs!: ElementRef[]
@@ -19,6 +20,22 @@ export class BillComponent {
   isZero = false
 
   constructor(private tipsService: TipsService) {}
+
+  numericOnly(event: KeyboardEvent): boolean { 
+    // restrict e,+,-,E characters in  input type number
+    const key = event.key.toUpperCase()
+    return !(key === 'E' || key === '+' || key === '-' );
+  }
+
+  handlePaste(event: any) {
+    let clipboardData = event.clipboardData || window.Clipboard;
+    let pastedData = clipboardData.getData('Text').toUpperCase();
+
+    if(pastedData.indexOf('E') > -1 || pastedData.indexOf('+') > -1 || pastedData.indexOf('-') > -1) {
+          event.stopPropagation();
+          event.preventDefault();
+    }
+  }
 
   checkIfIsZero(input: HTMLInputElement) {
     if (input.value === "") {

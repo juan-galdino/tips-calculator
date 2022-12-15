@@ -1,7 +1,13 @@
 <section class="container__bill">
   <header>
     <h3>Bill</h3>
-    <input type="number" aria-label="Bill" [(ngModel)]="bill.value" />
+    <input
+      type="number"
+      aria-label="Bill"
+      [(ngModel)]="bill.value"
+      (keypress)="numericOnly($event)"
+      (paste)="handlePaste($event)"
+    />
   </header>
 
   <article>
@@ -28,10 +34,12 @@
           type="number"
           placeholder="Custom"
           aria-label="Custom Tip"
+          class="container__button-tip"
+          #customTip
           (input)="setCustomTip(customTip)"
           (click)="disableRadioStatus()"
-          #customTip
-          class="container__button-tip"
+          (keypress)="numericOnly($event)"
+          (paste)="handlePaste($event)"
         />
       </div>
     </section>
@@ -49,6 +57,8 @@
       min="1"
       #inputPeople
       (input)="checkIfIsZero(inputPeople)"
+      (keypress)="numericOnly($event)"
+      (paste)="handlePaste($event)"
     />
   </footer>
 </section>
