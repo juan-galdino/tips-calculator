@@ -30,7 +30,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-input[type="number"]:not([placeholder="Custom"]) {
+input[type="text"]:not([placeholder="Custom"]) {
   font-size: 1.5rem;
   width: 100%;
   text-align: end;
@@ -47,7 +47,7 @@ input[aria-label="Number of People"] {
   background-position: 1rem;
 }
 
-input[type="number"] {
+input[type="text"] {
   background-color: var(--input-background);
 }
 

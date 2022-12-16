@@ -21,22 +21,6 @@ export class BillComponent {
 
   constructor(private tipsService: TipsService) {}
 
-  numericOnly(event: KeyboardEvent): boolean { 
-    // restrict e,+,-,E characters in  input type number
-    const key = event.key.toUpperCase()
-    return !(key === 'E' || key === '+' || key === '-' );
-  }
-
-  handlePaste(event: any) {
-    let clipboardData = event.clipboardData || window.Clipboard;
-    let pastedData = clipboardData.getData('Text').toUpperCase();
-
-    if(pastedData.indexOf('E') > -1 || pastedData.indexOf('+') > -1 || pastedData.indexOf('-') > -1) {
-          event.stopPropagation();
-          event.preventDefault();
-    }
-  }
-
   checkIfIsZero(input: HTMLInputElement) {
     if (input.value === "") {
       this.isZero = false
@@ -53,8 +37,53 @@ export class BillComponent {
     [...this.radiosInputs].forEach( radio => {
       if (radio.nativeElement.checked) {
         radio.nativeElement.checked = false
-        this.tip.value = this.customValue.nativeElement.value;
+        this.tip.value = Number(this.customValue.nativeElement.value);
       }
     })
   }
+
+
+  // Validation
+
+  // Restricts input for the given textbox to the given inputFilter.
+ setInputFilter(textbox: Element, inputFilter: (value: string) => boolean): void {
+  ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop", "focusout" ].forEach(function(event) {
+    textbox.addEventListener(event, function(this: HTMLInputElement  & { oldValue: string; oldSelectionStart: number | null, oldSelectionEnd: number | null }) {
+      if (inputFilter(this.value)) {
+        this.oldValue = this.value;
+        this.oldSelectionStart = this.selectionStart;
+        this.oldSelectionEnd = this.selectionEnd;
+      }
+      else if (Object.prototype.hasOwnProperty.call(this, "oldValue")) {
+        this.value = this.oldValue;
+        
+        if (this.oldSelectionStart !== null &&
+          this.oldSelectionEnd !== null) {
+          this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+        }
+      }
+      else {
+        this.value = "";
+      }
+    });
+  });
+}
+
+
+// Install input filters.
+callInputFilter(htmlInput: HTMLInputElement) {
+
+  if(htmlInput.ariaLabel != "Value of Bill") {
+    this.setInputFilter(htmlInput, function teste(value: string) {
+      return /^-?\d*$/.test(value);
+      // interger greater than 0 regexp
+    })
+  } else {
+    this.setInputFilter(htmlInput, function teste(value: string) {
+      return /^-?\d*[.,]?\d{0,2}$/.test(value);
+      // currency regexp
+    })
+  }
+};
+
 }

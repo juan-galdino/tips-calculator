@@ -2,14 +2,14 @@
   <header>
     <h3>Bill</h3>
     <input
-      type="number"
-      aria-label="Bill"
+      type="text"
+      aria-label="Value of Bill"
       [(ngModel)]="bill.value"
-      (keypress)="numericOnly($event)"
-      (paste)="handlePaste($event)"
+      #htmlBill
+      (input)="callInputFilter(htmlBill)"
+      maxlength="5"
     />
   </header>
-
   <article>
     <h3>Select Tip %</h3>
     <section class="container__all-tips">
@@ -31,15 +31,15 @@
       </div>
       <div>
         <input
-          type="number"
+          type="text"
           placeholder="Custom"
           aria-label="Custom Tip"
           class="container__button-tip"
           #customTip
           (input)="setCustomTip(customTip)"
           (click)="disableRadioStatus()"
-          (keypress)="numericOnly($event)"
-          (paste)="handlePaste($event)"
+          (input)="callInputFilter(customTip)"
+          maxlength="2"
         />
       </div>
     </section>
@@ -51,14 +51,13 @@
       <p *ngIf="isZero">Can't be zero</p>
     </section>
     <input
-      type="number"
+      type="text"
       aria-label="Number of People"
       [(ngModel)]="numOfPeople.value"
-      min="1"
       #inputPeople
       (input)="checkIfIsZero(inputPeople)"
-      (keypress)="numericOnly($event)"
-      (paste)="handlePaste($event)"
+      (input)="callInputFilter(inputPeople)"
+      maxlength="2"
     />
   </footer>
 </section>
